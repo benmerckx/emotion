@@ -78,8 +78,8 @@ export type Interpolation<MP = undefined> =
   | ObjectInterpolation<MP>
   | Equal<MP, undefined, never, FunctionInterpolation<MP>>
 
-export function serializeStyles<MP>(
-  registered: RegisteredCache,
+export function serializeStyles<MP>(              
   args: Array<TemplateStringsArray | Interpolation<MP>>,
+  registered: RegisteredCache,
   mergedProps?: MP
 ): SerializedStyles
